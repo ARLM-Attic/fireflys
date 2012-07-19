@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* FireflysAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FireflysAppDelegate.mm */; };
+		1D60589B0D05DD56006BFB54 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2514C27B10084DCA00A42282 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27910084DCA00A42282 /* Shader.fsh */; };
+		2514C27C10084DCA00A42282 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27A10084DCA00A42282 /* Shader.vsh */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28EC4C5911D54ECE0027AA9F /* FireflysViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28EC4C5711D54ECE0027AA9F /* FireflysViewController.mm */; };
+		28EC4C5A11D54ECE0027AA9F /* FireflysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28EC4C5811D54ECE0027AA9F /* FireflysViewController.xib */; };
+		28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.mm */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		3A931A1715B82E1500B95209 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A931A1115B82DC100B95209 /* libEngine.a */; };
+		3A931A1A15B82E4700B95209 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A72A28215B6F23500960874 /* libCore.a */; };
+		3A931A2115B8320C00B95209 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931A2015B8320C00B95209 /* Engine.h */; };
+		3A931AFE15B852DE00B95209 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931AFC15B852DE00B95209 /* Application.h */; };
+		3A931AFF15B852DE00B95209 /* Application.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A931AFD15B852DE00B95209 /* Application.mm */; };
+		3A931B3615B8545A00B95209 /* Allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2415B8545A00B95209 /* Allocator.h */; };
+		3A931B3715B8545A00B95209 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2515B8545A00B95209 /* Core.h */; };
+		3A931B3815B8545A00B95209 /* Define.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2615B8545A00B95209 /* Define.h */; };
+		3A931B3915B8545A00B95209 /* Filesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B2715B8545A00B95209 /* Filesystem.cpp */; };
+		3A931B3A15B8545A00B95209 /* Filesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2815B8545A00B95209 /* Filesystem.h */; };
+		3A931B3B15B8545A00B95209 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B2915B8545A00B95209 /* Object.cpp */; };
+		3A931B3C15B8545A00B95209 /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2A15B8545A00B95209 /* Object.h */; };
+		3A931B3D15B8545A00B95209 /* Private.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B2B15B8545A00B95209 /* Private.cpp */; };
+		3A931B3E15B8545A00B95209 /* Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2C15B8545A00B95209 /* Private.h */; };
+		3A931B3F15B8545A00B95209 /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B2D15B8545A00B95209 /* Property.cpp */; };
+		3A931B4015B8545A00B95209 /* Property.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2E15B8545A00B95209 /* Property.h */; };
+		3A931B4115B8545A00B95209 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2F15B8545A00B95209 /* Serializable.h */; };
+		3A931B4215B8545A00B95209 /* Serializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B3015B8545A00B95209 /* Serializer.cpp */; };
+		3A931B4315B8545A00B95209 /* Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3115B8545A00B95209 /* Serializer.h */; };
+		3A931B4415B8545A00B95209 /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A931B3215B8545A00B95209 /* Stream.cpp */; };
+		3A931B4515B8545A00B95209 /* Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3315B8545A00B95209 /* Stream.h */; };
+		3A931B4615B8545A00B95209 /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3415B8545A00B95209 /* Type.h */; };
+		3A931B4715B8545A00B95209 /* Yield.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3515B8545A00B95209 /* Yield.h */; };
+		3ABA86FA15B6F8D400F791B4 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A72A28215B6F23500960874 /* libCore.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A931A1515B82DF400B95209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A931A1015B82DC100B95209;
+			remoteInfo = Engine;
+		};
+		3A931A1815B82E3B00B95209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A72A28115B6F23500960874;
+			remoteInfo = Core;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* FireflysAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireflysAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* FireflysAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FireflysAppDelegate.mm; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Fireflys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireflys.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2514C27910084DCA00A42282 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		2514C27A10084DCA00A42282 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28EC4C5611D54ECE0027AA9F /* FireflysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireflysViewController.h; sourceTree = "<group>"; };
+		28EC4C5711D54ECE0027AA9F /* FireflysViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FireflysViewController.mm; sourceTree = "<group>"; };
+		28EC4C5811D54ECE0027AA9F /* FireflysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FireflysViewController.xib; sourceTree = "<group>"; };
+		28FD14FC0DC6FC130079059D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		28FD14FD0DC6FC130079059D /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Fireflys_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fireflys_Prefix.pch; sourceTree = "<group>"; };
+		3A72A28215B6F23500960874 /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A931A1115B82DC100B95209 /* libEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A931A2015B8320C00B95209 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = ../../../Source/Engine/Engine.h; sourceTree = SOURCE_ROOT; };
+		3A931AFC15B852DE00B95209 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../../../Source/Engine/Platform/iOS/Application.h; sourceTree = SOURCE_ROOT; };
+		3A931AFD15B852DE00B95209 /* Application.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Application.mm; path = ../../../Source/Engine/Platform/iOS/Application.mm; sourceTree = SOURCE_ROOT; };
+		3A931B2415B8545A00B95209 /* Allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Allocator.h; path = ../../../Source/Core/Allocator.h; sourceTree = SOURCE_ROOT; };
+		3A931B2515B8545A00B95209 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Core.h; path = ../../../Source/Core/Core.h; sourceTree = SOURCE_ROOT; };
+		3A931B2615B8545A00B95209 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = ../../../Source/Core/Define.h; sourceTree = SOURCE_ROOT; };
+		3A931B2715B8545A00B95209 /* Filesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Filesystem.cpp; path = ../../../Source/Core/Filesystem.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B2815B8545A00B95209 /* Filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Filesystem.h; path = ../../../Source/Core/Filesystem.h; sourceTree = SOURCE_ROOT; };
+		3A931B2915B8545A00B95209 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = ../../../Source/Core/Object.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B2A15B8545A00B95209 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../../../Source/Core/Object.h; sourceTree = SOURCE_ROOT; };
+		3A931B2B15B8545A00B95209 /* Private.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Private.cpp; path = ../../../Source/Core/Private.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B2C15B8545A00B95209 /* Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Private.h; path = ../../../Source/Core/Private.h; sourceTree = SOURCE_ROOT; };
+		3A931B2D15B8545A00B95209 /* Property.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Property.cpp; path = ../../../Source/Core/Property.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B2E15B8545A00B95209 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Property.h; path = ../../../Source/Core/Property.h; sourceTree = SOURCE_ROOT; };
+		3A931B2F15B8545A00B95209 /* Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serializable.h; path = ../../../Source/Core/Serializable.h; sourceTree = SOURCE_ROOT; };
+		3A931B3015B8545A00B95209 /* Serializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Serializer.cpp; path = ../../../Source/Core/Serializer.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B3115B8545A00B95209 /* Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serializer.h; path = ../../../Source/Core/Serializer.h; sourceTree = SOURCE_ROOT; };
+		3A931B3215B8545A00B95209 /* Stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stream.cpp; path = ../../../Source/Core/Stream.cpp; sourceTree = SOURCE_ROOT; };
+		3A931B3315B8545A00B95209 /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stream.h; path = ../../../Source/Core/Stream.h; sourceTree = SOURCE_ROOT; };
+		3A931B3415B8545A00B95209 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Type.h; path = ../../../Source/Core/Type.h; sourceTree = SOURCE_ROOT; };
+		3A931B3515B8545A00B95209 /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Yield.h; path = ../../../Source/Core/Yield.h; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Fireflys-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fireflys-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				3ABA86FA15B6F8D400F791B4 /* libCore.a in Frameworks */,
+				3A931A1715B82E1500B95209 /* libEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A72A28015B6F23500960874 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A931A0F15B82DC100B95209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A931A1A15B82E4700B95209 /* libCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28FD14FC0DC6FC130079059D /* EAGLView.h */,
+				28FD14FD0DC6FC130079059D /* EAGLView.mm */,
+				1D3623240D0F684500981E51 /* FireflysAppDelegate.h */,
+				1D3623250D0F684500981E51 /* FireflysAppDelegate.mm */,
+				28EC4C5611D54ECE0027AA9F /* FireflysViewController.h */,
+				28EC4C5711D54ECE0027AA9F /* FireflysViewController.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Fireflys.app */,
+				3A72A28215B6F23500960874 /* libCore.a */,
+				3A931A1115B82DC100B95209 /* libEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2514C27610084DB600A42282 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2514C27910084DCA00A42282 /* Shader.fsh */,
+				2514C27A10084DCA00A42282 /* Shader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				3A931A1F15B831C000B95209 /* Engine */,
+				3ABA86CB15B6F59700F791B4 /* Core */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				2514C27610084DB600A42282 /* Shaders */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Fireflys_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.mm */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28EC4C5811D54ECE0027AA9F /* FireflysViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Fireflys-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A931A1F15B831C000B95209 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				3A931AFC15B852DE00B95209 /* Application.h */,
+				3A931AFD15B852DE00B95209 /* Application.mm */,
+				3A931A2015B8320C00B95209 /* Engine.h */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		3ABA86CB15B6F59700F791B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3A931B2415B8545A00B95209 /* Allocator.h */,
+				3A931B2515B8545A00B95209 /* Core.h */,
+				3A931B2615B8545A00B95209 /* Define.h */,
+				3A931B2715B8545A00B95209 /* Filesystem.cpp */,
+				3A931B2815B8545A00B95209 /* Filesystem.h */,
+				3A931B2915B8545A00B95209 /* Object.cpp */,
+				3A931B2A15B8545A00B95209 /* Object.h */,
+				3A931B2B15B8545A00B95209 /* Private.cpp */,
+				3A931B2C15B8545A00B95209 /* Private.h */,
+				3A931B2D15B8545A00B95209 /* Property.cpp */,
+				3A931B2E15B8545A00B95209 /* Property.h */,
+				3A931B2F15B8545A00B95209 /* Serializable.h */,
+				3A931B3015B8545A00B95209 /* Serializer.cpp */,
+				3A931B3115B8545A00B95209 /* Serializer.h */,
+				3A931B3215B8545A00B95209 /* Stream.cpp */,
+				3A931B3315B8545A00B95209 /* Stream.h */,
+				3A931B3415B8545A00B95209 /* Type.h */,
+				3A931B3515B8545A00B95209 /* Yield.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A72A27E15B6F23500960874 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A931B3615B8545A00B95209 /* Allocator.h in Headers */,
+				3A931B3715B8545A00B95209 /* Core.h in Headers */,
+				3A931B3815B8545A00B95209 /* Define.h in Headers */,
+				3A931B3A15B8545A00B95209 /* Filesystem.h in Headers */,
+				3A931B3C15B8545A00B95209 /* Object.h in Headers */,
+				3A931B3E15B8545A00B95209 /* Private.h in Headers */,
+				3A931B4015B8545A00B95209 /* Property.h in Headers */,
+				3A931B4115B8545A00B95209 /* Serializable.h in Headers */,
+				3A931B4315B8545A00B95209 /* Serializer.h in Headers */,
+				3A931B4515B8545A00B95209 /* Stream.h in Headers */,
+				3A931B4615B8545A00B95209 /* Type.h in Headers */,
+				3A931B4715B8545A00B95209 /* Yield.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A931A0D15B82DC100B95209 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A931A2115B8320C00B95209 /* Engine.h in Headers */,
+				3A931AFE15B852DE00B95209 /* Application.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Fireflys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Fireflys" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A931A1615B82DF400B95209 /* PBXTargetDependency */,
+			);
+			name = Fireflys;
+			productName = Fireflys;
+			productReference = 1D6058910D05DD3D006BFB54 /* Fireflys.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A72A28115B6F23500960874 /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A72A28515B6F27900960874 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				3A72A27E15B6F23500960874 /* Headers */,
+				3A72A27F15B6F23500960874 /* Sources */,
+				3A72A28015B6F23500960874 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Core;
+			productName = Core;
+			productReference = 3A72A28215B6F23500960874 /* libCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3A931A1015B82DC100B95209 /* Engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A931A1415B82DE000B95209 /* Build configuration list for PBXNativeTarget "Engine" */;
+			buildPhases = (
+				3A931A0D15B82DC100B95209 /* Headers */,
+				3A931A0E15B82DC100B95209 /* Sources */,
+				3A931A0F15B82DC100B95209 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A931A1915B82E3B00B95209 /* PBXTargetDependency */,
+			);
+			name = Engine;
+			productName = Engine;
+			productReference = 3A931A1115B82DC100B95209 /* libEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Fireflys" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Fireflys */,
+				3A72A28115B6F23500960874 /* Core */,
+				3A931A1015B82DC100B95209 /* Engine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2514C27B10084DCA00A42282 /* Shader.fsh in Resources */,
+				2514C27C10084DCA00A42282 /* Shader.vsh in Resources */,
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				28EC4C5A11D54ECE0027AA9F /* FireflysViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.mm in Sources */,
+				1D3623260D0F684500981E51 /* FireflysAppDelegate.mm in Sources */,
+				28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */,
+				28EC4C5911D54ECE0027AA9F /* FireflysViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A72A27F15B6F23500960874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A931B3915B8545A00B95209 /* Filesystem.cpp in Sources */,
+				3A931B3B15B8545A00B95209 /* Object.cpp in Sources */,
+				3A931B3D15B8545A00B95209 /* Private.cpp in Sources */,
+				3A931B3F15B8545A00B95209 /* Property.cpp in Sources */,
+				3A931B4215B8545A00B95209 /* Serializer.cpp in Sources */,
+				3A931B4415B8545A00B95209 /* Stream.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A931A0E15B82DC100B95209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A931AFF15B852DE00B95209 /* Application.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A931A1615B82DF400B95209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A931A1015B82DC100B95209 /* Engine */;
+			targetProxy = 3A931A1515B82DF400B95209 /* PBXContainerItemProxy */;
+		};
+		3A931A1915B82E3B00B95209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A72A28115B6F23500960874 /* Core */;
+			targetProxy = 3A931A1815B82E3B00B95209 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Fireflys_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "Fireflys-Info.plist";
+				PRODUCT_NAME = Fireflys;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Fireflys_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "Fireflys-Info.plist";
+				PRODUCT_NAME = Fireflys;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A72A28315B6F23500960874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Core;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A72A28415B6F23500960874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = Core;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		3A931A1215B82DC200B95209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = Engine;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A931A1315B82DC200B95209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = Engine;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Fireflys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A72A28515B6F27900960874 /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A72A28315B6F23500960874 /* Debug */,
+				3A72A28415B6F23500960874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A931A1415B82DE000B95209 /* Build configuration list for PBXNativeTarget "Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A931A1215B82DC200B95209 /* Debug */,
+				3A931A1315B82DC200B95209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Fireflys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

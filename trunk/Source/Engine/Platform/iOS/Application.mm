@@ -15,15 +15,15 @@
 using namespace Fireflys;
 
 Application::Application()
-: _argc(0)
-, _argv(NULL)
+: mArgc(0)
+, mArgv(NULL)
 {
 }
 
 void Application::SetCommandLine(int argc, char* argv[])
 {
-	_argc = argc;
-	_argv = argv;
+	mArgc = argc;
+	mArgv = argv;
 }
 
 Application::~Application()
@@ -32,6 +32,16 @@ Application::~Application()
 
 int Application::Run()
 {
+    {
+        SharedPtr<Application> p1(new Application);
+        SharedPtr<Application> p2 = p1;
+        *p2;
+        p1->SetCommandLine(0, 0);
+        Application* t = p2;
+        
+        if (p1 == p2 || p1 == NULL || NULL == p1 || t == p2) ;
+    }
+                      
 	PropertyFactoryManager::Instance().Register(typeid(int).name(), new PropertyFactoryInt);
 	PropertyFactoryManager::Instance().Register(typeid(float).name(), new PropertyFactoryInt);
 	
@@ -66,7 +76,7 @@ int Application::Run()
 
 	
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(_argc, _argv, nil, nil);
+    int retVal = UIApplicationMain(mArgc, mArgv, nil, nil);
     [pool release];
     return retVal;	
 }

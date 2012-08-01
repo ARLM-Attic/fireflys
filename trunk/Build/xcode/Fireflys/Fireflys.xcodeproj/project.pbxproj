@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* FireflysAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FireflysAppDelegate.mm */; };
+		1D45E3EF15C8D29A00ED6861 /* Template.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D45E3EE15C8D29A00ED6861 /* Template.h */; };
 		1D60589B0D05DD56006BFB54 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -66,6 +67,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* FireflysAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireflysAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* FireflysAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FireflysAppDelegate.mm; sourceTree = "<group>"; };
+		1D45E3EE15C8D29A00ED6861 /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Template.h; path = ../../../Source/Core/Template.h; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Fireflys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireflys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2514C27910084DCA00A42282 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				3A931B3315B8545A00B95209 /* Stream.h */,
 				3A931B3415B8545A00B95209 /* Type.h */,
 				3A931B3515B8545A00B95209 /* Yield.h */,
+				1D45E3EE15C8D29A00ED6861 /* Template.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				3A931B4515B8545A00B95209 /* Stream.h in Headers */,
 				3A931B4615B8545A00B95209 /* Type.h in Headers */,
 				3A931B4715B8545A00B95209 /* Yield.h in Headers */,
+				1D45E3EF15C8D29A00ED6861 /* Template.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,8 +27,8 @@ namespace Fireflys
 		static Application& Instance();
 		
 	protected:
-		int _argc;
-		char** _argv;
+		int mArgc;
+		char** mArgv;
 	};
 }
 

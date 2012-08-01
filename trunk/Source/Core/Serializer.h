@@ -1,6 +1,8 @@
 #ifndef __SERIALIZER_H__
 #define __SERIALIZER_H__
 
+#include "Template.h"
+
 namespace Fireflys
 {
 	class Object;
@@ -54,7 +56,7 @@ namespace Fireflys
 		MemoryStream* GetMemoryStream() { return mCache; }
 
 	protected:
-		MemoryStream* mCache;
+		SharedPtr<MemoryStream> mCache;
 	};
 
 	class FF_API WriteMemorySerializer : public MemorySerializer

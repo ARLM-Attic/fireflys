@@ -16,5 +16,6 @@
 #include "Filesystem.h"
 #include "Property.h"
 #include "Serializer.h"
+#include "Template.h"
 
 #endif // __CORE_H__

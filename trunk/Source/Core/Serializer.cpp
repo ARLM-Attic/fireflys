@@ -66,7 +66,7 @@ namespace Fireflys
 			memcpy(newCache->GetBuffer(), mCache->GetBuffer(), mCache->GetValidSize());
 			newCache->SetCur(mCache->GetValidSize());
 
-			delete mCache;
+			//delete mCache;
 			mCache = newCache;
 		}
 	}

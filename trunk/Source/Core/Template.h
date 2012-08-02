@@ -2,12 +2,12 @@
 //  Template.h
 //  Fireflys
 //
-//  Created by JCC-Mini on 12-8-1.
+//  Created by Adrian on 12-8-1.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#ifndef Fireflys_Template_h
-#define Fireflys_Template_h
+#ifndef __TEMPLATE_H__
+#define __TEMPLATE_H__
 
 namespace Fireflys
 {
@@ -16,7 +16,7 @@ namespace Fireflys
     class SharedPtr
     {
     public:
-        struct Holder
+        struct Holder : Object
         {
             T* ptr;
             unsigned int refCount;
@@ -58,6 +58,14 @@ namespace Fireflys
             }
         }
         
+        SharedPtr& operator=(T* ptr)
+        {           
+            mHolder->ptr = ptr;
+            mHolder->refCount = NULL == ptr ? 0 : 1;
+            
+            return *this;
+        }
+
         SharedPtr& operator=(const SharedPtr& rhs)
         {
             if (this == &rhs)
@@ -123,6 +131,21 @@ namespace Fireflys
         Holder* mHolder;
     };
     
+	
+	template <typename T>
+	class Singleton
+	{
+	public:
+		static SharedPtr<T> sApp;
+		
+		static T& Instance()
+		{
+			if (NULL == sApp)
+				sApp = new T;
+			
+			return *sApp;
+		}
+	};
 }
 
-#endif
+#endif // __TEMPLATE_H__

@@ -9,7 +9,7 @@ bool PropertyFactoryManager::Register( const char* type, PropertyFactory* pf )
 	if (it != mFactorys.end())
 		return false;
 
-	mFactorys[type] = pf;
+	mFactorys.insert(std::make_pair(type, pf));
 
 	return true;
 }

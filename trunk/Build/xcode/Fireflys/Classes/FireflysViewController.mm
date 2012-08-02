@@ -11,6 +11,10 @@
 #import "FireflysViewController.h"
 #import "EAGLView.h"
 
+#include "Application.h"
+
+using namespace Fireflys;
+
 // Uniform index.
 enum {
     UNIFORM_TRANSLATE,
@@ -64,10 +68,14 @@ enum {
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
+
+	Application::Instance().OnInit();
 }
 
 - (void)dealloc
 {
+	Application::Instance().OnDestroy();
+
     if (program)
     {
         glDeleteProgram(program);

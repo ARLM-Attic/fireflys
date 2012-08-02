@@ -3,6 +3,30 @@
 
 using namespace Fireflys;
 
+void* Object::operator new(size_t size)
+{
+	return malloc(size);
+}
+
+void Object::operator delete(void* p)
+{
+	free(p);
+}
+
+void* Object::operator new[](size_t size)
+{
+	return malloc(size);
+}
+
+void Object::operator delete[](void* p)
+{
+	free(p);
+}
+
+Object::~Object()
+{
+}
+
 uint Object::GetPropertyCount() const
 {
 	return mPropertys.size();

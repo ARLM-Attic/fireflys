@@ -11,7 +11,7 @@ namespace Fireflys
 	class FF_API Serializer
 	{
 	public:
-		virtual ~Serializer() {}
+		virtual ~Serializer();
 		
 		virtual Serializer& operator << (uint& v) = 0;
 
@@ -53,7 +53,7 @@ namespace Fireflys
 
 		virtual Serializer& operator << (String& v);
 
-		MemoryStream* GetMemoryStream() { return mCache; }
+		SharedPtr<MemoryStream>& GetMemoryStream() { return mCache; }
 
 	protected:
 		SharedPtr<MemoryStream> mCache;

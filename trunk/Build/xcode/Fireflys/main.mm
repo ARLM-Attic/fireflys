@@ -6,13 +6,7 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#include "Application.h"
+#include "Engine.h"
 
 using namespace Fireflys;
 
-int main(int argc, char *argv[]) {
-    Application& app = Application::Instance();
-	app.SetCommandLine(argc, argv);
-	int ret = app.Run();
-	return ret;
-}

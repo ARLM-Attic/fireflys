@@ -9,39 +9,52 @@
 
 #include "Engine.h"
 #include "Application.h"
+#include "Template.h"
 
 #import <UIKit/UIKit.h>
 
 using namespace Fireflys;
 
-Application::Application()
-: mArgc(0)
-, mArgv(NULL)
+//-------------------------------------------------
+CommandLine::CommandLine()
 {
 }
 
-void Application::SetCommandLine(int argc, char* argv[])
+void CommandLine::Set(int argc, char** argv)
 {
 	mArgc = argc;
 	mArgv = argv;
 }
 
-Application::~Application()
+//-------------------------------------------------
+//template <>
+//SharedPtr<Application> Singleton<Application>::sApp = NULL;
+
+Application& Application::Instance()
 {
+	static Application ins;
+	return ins;
 }
 
-int Application::Run()
+class Test
 {
-    {
-        SharedPtr<Application> p1(new Application);
-        SharedPtr<Application> p2 = p1;
-        *p2;
-        p1->SetCommandLine(0, 0);
-        Application* t = p2;
-        
-        if (p1 == p2 || p1 == NULL || NULL == p1 || t == p2) ;
-    }
-                      
+public:
+	int a;
+	
+};
+
+Application::Application()
+{
+	
+	{
+		SharedPtr<Test> p1(new Test);
+		SharedPtr<Test> p2 = p1;
+		*p2;
+		Test* t = p2;
+		
+		if (p1 == p2 || p1 == NULL || NULL == p1 || t == p2) ;
+	}
+	
 	PropertyFactoryManager::Instance().Register(typeid(int).name(), new PropertyFactoryInt);
 	PropertyFactoryManager::Instance().Register(typeid(float).name(), new PropertyFactoryInt);
 	
@@ -52,40 +65,60 @@ int Application::Run()
 	sr << *p;
 	
 	WriteMemorySerializer wms;
-	wms.Increase(sizeof(int)*10000);
+	wms.Increase(sizeof(int)*100);
 	
-	for (int i = 0; i < 10000; ++i)
+	for (int i = 0; i < 100; ++i)
 		wms << i;
 	
 	wms << String("你个2");
 	wms << 3.14f;
 	wms << 6u;
 	
-	ReadMemorySerializer rms(wms.GetMemoryStream());
+//	ReadMemorySerializer rms(wms.GetMemoryStream());
 	
-	for (int i = 0; i < 10000; ++i)
-	{
-		int d;
-		rms << d;
+//	for (int i = 0; i < 100; ++i)
+//	{
+//		int d;
+//		rms << d;
 		//		std::cout << d << std::endl;
-	}
+//	}
 	
-	String str;
-	rms << str;
+//	String str;
+//	rms << str;
 	//	std::cout << str << std::endl;		
+	
+}
 
+Application::~Application()
+{
+}
+
+int Application::Run(Form* form)
+{
+	mForm = new Form;
 	
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(mArgc, mArgv, nil, nil);
+    int retVal = UIApplicationMain(mCmdLine.mArgc, mCmdLine.mArgv, nil, nil);
     [pool release];
-    return retVal;	
+    return retVal;		
 }
 
-Application& Application::Instance()
+void Application::OnInit()
 {
-	static Application ins;
-	return ins;
+	if (mForm)
+		mForm->OnInit();
 }
 
+void Application::OnDestroy()
+{
+	if (mForm)
+		mForm->OnDestroy();
+}
 
-
+int main(int argc, char *argv[]) {	
+	
+	CommandLine& cmdline = Application::Instance().mCmdLine;
+	cmdline.Set(argc, argv);
+	
+	return Application::Instance().Run(NULL);
+}

@@ -20,10 +20,11 @@
 		28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.mm */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		3A06D5EC15CAD4E2004E036C /* Form.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A06D5EA15CAD4E2004E036C /* Form.h */; };
+		3A06D5ED15CAD4E2004E036C /* Form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A06D5EB15CAD4E2004E036C /* Form.cpp */; };
 		3A931A1715B82E1500B95209 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A931A1115B82DC100B95209 /* libEngine.a */; };
 		3A931A1A15B82E4700B95209 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A72A28215B6F23500960874 /* libCore.a */; };
 		3A931A2115B8320C00B95209 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931A2015B8320C00B95209 /* Engine.h */; };
-		3A931AFE15B852DE00B95209 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931AFC15B852DE00B95209 /* Application.h */; };
 		3A931AFF15B852DE00B95209 /* Application.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A931AFD15B852DE00B95209 /* Application.mm */; };
 		3A931B3615B8545A00B95209 /* Allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2415B8545A00B95209 /* Allocator.h */; };
 		3A931B3715B8545A00B95209 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B2515B8545A00B95209 /* Core.h */; };
@@ -43,6 +44,7 @@
 		3A931B4515B8545A00B95209 /* Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3315B8545A00B95209 /* Stream.h */; };
 		3A931B4615B8545A00B95209 /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3415B8545A00B95209 /* Type.h */; };
 		3A931B4715B8545A00B95209 /* Yield.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A931B3515B8545A00B95209 /* Yield.h */; };
+		3AA8E88915C95FDB00F1529D /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA8E88815C95FDB00F1529D /* Application.h */; };
 		3ABA86FA15B6F8D400F791B4 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A72A28215B6F23500960874 /* libCore.a */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +84,11 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Fireflys_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fireflys_Prefix.pch; sourceTree = "<group>"; };
+		3A06D5EA15CAD4E2004E036C /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Form.h; path = ../../../Source/Engine/Form.h; sourceTree = SOURCE_ROOT; };
+		3A06D5EB15CAD4E2004E036C /* Form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Form.cpp; path = ../../../Source/Engine/Form.cpp; sourceTree = SOURCE_ROOT; };
 		3A72A28215B6F23500960874 /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A931A1115B82DC100B95209 /* libEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A931A2015B8320C00B95209 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = ../../../Source/Engine/Engine.h; sourceTree = SOURCE_ROOT; };
-		3A931AFC15B852DE00B95209 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../../../Source/Engine/Platform/iOS/Application.h; sourceTree = SOURCE_ROOT; };
 		3A931AFD15B852DE00B95209 /* Application.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Application.mm; path = ../../../Source/Engine/Platform/iOS/Application.mm; sourceTree = SOURCE_ROOT; };
 		3A931B2415B8545A00B95209 /* Allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Allocator.h; path = ../../../Source/Core/Allocator.h; sourceTree = SOURCE_ROOT; };
 		3A931B2515B8545A00B95209 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Core.h; path = ../../../Source/Core/Core.h; sourceTree = SOURCE_ROOT; };
@@ -105,6 +108,7 @@
 		3A931B3315B8545A00B95209 /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stream.h; path = ../../../Source/Core/Stream.h; sourceTree = SOURCE_ROOT; };
 		3A931B3415B8545A00B95209 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Type.h; path = ../../../Source/Core/Type.h; sourceTree = SOURCE_ROOT; };
 		3A931B3515B8545A00B95209 /* Yield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Yield.h; path = ../../../Source/Core/Yield.h; sourceTree = SOURCE_ROOT; };
+		3AA8E88815C95FDB00F1529D /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = ../../../Source/Engine/Platform/iOS/Application.h; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Fireflys-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fireflys-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,12 +221,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A06D5EE15CAD587004E036C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8E88815C95FDB00F1529D /* Application.h */,
+				3A931AFD15B852DE00B95209 /* Application.mm */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		3A931A1F15B831C000B95209 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				3A931AFC15B852DE00B95209 /* Application.h */,
-				3A931AFD15B852DE00B95209 /* Application.mm */,
+				3A06D5EE15CAD587004E036C /* iOS */,
 				3A931A2015B8320C00B95209 /* Engine.h */,
+				3A06D5EA15CAD4E2004E036C /* Form.h */,
+				3A06D5EB15CAD4E2004E036C /* Form.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -281,7 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A931A2115B8320C00B95209 /* Engine.h in Headers */,
-				3A931AFE15B852DE00B95209 /* Application.h in Headers */,
+				3AA8E88915C95FDB00F1529D /* Application.h in Headers */,
+				3A06D5EC15CAD4E2004E036C /* Form.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A931AFF15B852DE00B95209 /* Application.mm in Sources */,
+				3A06D5ED15CAD4E2004E036C /* Form.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +455,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Fireflys_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Fireflys-Info.plist";
 				PRODUCT_NAME = Fireflys;
@@ -452,6 +469,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Fireflys_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Fireflys-Info.plist";
 				PRODUCT_NAME = Fireflys;
@@ -481,6 +499,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = Core;
 				SDKROOT = iphoneos;
@@ -495,6 +514,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = Engine;
 				SDKROOT = iphoneos;
@@ -508,6 +528,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = Engine;
 				SDKROOT = iphoneos;

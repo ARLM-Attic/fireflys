@@ -2,6 +2,7 @@
 #define __PROPERTY_H__
 
 #include "Object.h"
+#include "Template.h"
 
 namespace Fireflys
 {
@@ -56,7 +57,7 @@ namespace Fireflys
 		virtual Property* Create() = 0;
 	};
 
-	typedef std::map<std::string, PropertyFactory*> PropertyFactoryMap;
+	typedef std::map<std::string, SharedPtr<PropertyFactory> > PropertyFactoryMap;
 
 	class FF_API PropertyFactoryInt : public PropertyFactory
 	{

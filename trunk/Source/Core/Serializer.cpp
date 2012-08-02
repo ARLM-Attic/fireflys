@@ -7,6 +7,9 @@
 
 namespace Fireflys
 {
+	Serializer::~Serializer()
+	{
+	}
 
 	MemorySerializer::MemorySerializer()
 		: mCache(NULL)
@@ -93,11 +96,6 @@ namespace Fireflys
 	
 	WriteMemorySerializer::~WriteMemorySerializer()
 	{
-		if (mCache)
-		{
-			delete mCache;
-			mCache = NULL;
-		}
 	}		
 
 	Serializer& WriteMemorySerializer::operator<<( uint& v )

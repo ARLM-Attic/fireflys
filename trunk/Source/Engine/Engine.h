@@ -12,4 +12,7 @@
 
 #include "Core.h"
 
+#include "Application.h"
+#include "Form.h"
+
 #endif // __ENGINE_H__

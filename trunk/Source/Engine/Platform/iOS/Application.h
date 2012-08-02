@@ -14,21 +14,37 @@
 
 namespace Fireflys
 {
-	class FF_API Application
+	class CommandLine
 	{
 	public:
+		CommandLine();
+		
+		void Set(int argc, char** argv);
+		
+		int mArgc;
+		char** mArgv;
+	};
+	
+	class Form;
+	
+	class FF_API Application
+	{
+	public:						
 		Application();
 		~Application();
 		
-		void SetCommandLine(int argc, char* argv[]);
-		
-		int Run();
-		
 		static Application& Instance();
 		
+		int Run(Form* form);
+		
+		void OnInit();
+		
+		void OnDestroy();
+		
+		CommandLine mCmdLine;
+						
 	protected:
-		int mArgc;
-		char** mArgv;
+		SharedPtr<Form> mForm;
 	};
 }
 

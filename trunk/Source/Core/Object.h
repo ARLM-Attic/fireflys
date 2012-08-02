@@ -9,6 +9,13 @@ namespace Fireflys
 	class FF_API Object
 	{
 	public:
+		void* operator new(size_t size);
+		void operator delete(void* p);
+		void* operator new[](size_t size);
+		void operator delete[](void* p);
+		
+		virtual ~Object();
+			
 		virtual const char* Type()
 		{
 			return typeid(*this).name();

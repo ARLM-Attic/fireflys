@@ -16,27 +16,27 @@ namespace Fireflys
     class SharedPtr
     {
     public:
-        struct Holder : Object
+        struct Holder
         {
             T* ptr;
             unsigned int refCount;
         };
         
-        SharedPtr()
+        explicit SharedPtr()
         {
             mHolder = new Holder;
             mHolder->ptr = NULL;
             mHolder->refCount = 0;
         }
     
-        SharedPtr(T* ptr)
+        explicit SharedPtr(T* ptr)
         {
             mHolder = new Holder;
             mHolder->ptr = ptr;
             mHolder->refCount = NULL == ptr ? 0 : 1;
         }
     
-        SharedPtr(const SharedPtr& rhs)
+        explicit SharedPtr(const SharedPtr& rhs)
         : mHolder(rhs.mHolder)
         {
             if (this == &rhs)
@@ -81,14 +81,26 @@ namespace Fireflys
             }
             
             mHolder = rhs.mHolder;
-            mHolder->refCount++;
+            
+            if (mHolder->ptr)
+                mHolder->refCount++;
             
             return *this;
+        }
+        
+        operator T*&()
+        {
+            return mHolder->ptr;
         }
                 
         bool operator==(T* p) const
         {
             return mHolder->ptr == p;
+        }
+        
+        friend bool operator==(T* p, const SharedPtr& ptr)
+        {
+            return ptr == p;
         }
 
         bool operator==(const SharedPtr& rhs) const
@@ -103,23 +115,20 @@ namespace Fireflys
             return *mHolder->ptr;
         }
     
-        T* operator->()
+        T*& operator->()
         {
             assert(mHolder->ptr);
         
             return mHolder->ptr;
         }
-    
-        operator T*()
-        {
-            return mHolder->ptr;
-        }
-        
+            
     protected:
         void Release()
         {
+            if (NULL == mHolder->ptr)
+                return;
+            
             assert(mHolder->refCount > 0);
-        
             mHolder->refCount--;
             if (mHolder->refCount == 0)
             {

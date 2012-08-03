@@ -30,11 +30,10 @@ namespace Fireflys
 	class FF_API Application
 	{
 	public:						
-		Application();
-		~Application();
-		
 		static Application& Instance();
-		
+
+		~Application();
+				
 		int Run(Form* form);
 		
 		void OnInit();
@@ -44,6 +43,8 @@ namespace Fireflys
 		CommandLine mCmdLine;
 						
 	protected:
+		Application();
+
 		SharedPtr<Form> mForm;
 	};
 }

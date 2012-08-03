@@ -8,12 +8,7 @@ namespace Fireflys
 
 	class FF_API Object
 	{
-	public:
-		void* operator new(size_t size);
-		void operator delete(void* p);
-		void* operator new[](size_t size);
-		void operator delete[](void* p);
-		
+	public:	
 		virtual ~Object();
 			
 		virtual const char* Type()

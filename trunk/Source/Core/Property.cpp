@@ -1,5 +1,6 @@
 #include "Private.h"
 #include "Property.h"
+#include "Template.h"
 
 using namespace Fireflys;
 
@@ -9,7 +10,7 @@ bool PropertyFactoryManager::Register( const char* type, PropertyFactory* pf )
 	if (it != mFactorys.end())
 		return false;
 
-	mFactorys.insert(std::make_pair(type, pf));
+	mFactorys[type] = pf;
 
 	return true;
 }
@@ -25,9 +26,10 @@ void PropertyFactoryManager::Unregister( const char* type )
 
 PropertyFactory* PropertyFactoryManager::GetFactory( const char* type )
 {
+    static SharedPtr<PropertyFactory> null;
 	PropertyFactoryMap::iterator it = mFactorys.find(type);
 	if (it == mFactorys.end())
-		return NULL;
+		return null;
 
 	return it->second;
 }

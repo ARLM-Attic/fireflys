@@ -3,6 +3,11 @@
 
 using namespace Fireflys;
 
+Stream::~Stream()
+{
+    
+}
+
 MemoryStream::MemoryStream( uint size )
 : mSize(size)
 {

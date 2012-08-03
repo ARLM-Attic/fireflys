@@ -6,6 +6,8 @@ namespace Fireflys
 	class Stream
 	{
 	public:
+        virtual ~Stream();
+        
 		virtual void Write(const uint& data) = 0;
 
 		virtual void Write(const int& data) = 0;
@@ -27,7 +29,7 @@ namespace Fireflys
 	{
 	public:
 		MemoryStream(uint size);
-		~MemoryStream();
+		virtual ~MemoryStream();
 
 		virtual void Write(const uint& data);
 

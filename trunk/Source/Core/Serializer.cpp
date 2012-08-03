@@ -17,7 +17,7 @@ namespace Fireflys
 
 	}
 
-	MemorySerializer::MemorySerializer( MemoryStream* stream )
+	MemorySerializer::MemorySerializer( SharedPtr<MemoryStream>& stream )
 		: mCache(stream)
 	{
 	}
@@ -163,11 +163,16 @@ namespace Fireflys
 		return *this;
 	}
 
-	ReadMemorySerializer::ReadMemorySerializer( MemoryStream* stream )
+	ReadMemorySerializer::ReadMemorySerializer( SharedPtr<MemoryStream>& stream )
 		: MemorySerializer(stream)
 	{
 		mCache->SetCur(0);
 	}
+    
+    ReadMemorySerializer::~ReadMemorySerializer()
+    {
+        
+    }
 
 	Serializer& ReadMemorySerializer::operator<<( uint& v )
 	{

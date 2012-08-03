@@ -39,7 +39,7 @@ namespace Fireflys
 
 		MemorySerializer(uint size);
 
-		MemorySerializer(MemoryStream* stream);
+		MemorySerializer(SharedPtr<MemoryStream>& stream);
 
 		~MemorySerializer();
 
@@ -84,7 +84,8 @@ namespace Fireflys
 	class FF_API ReadMemorySerializer : public MemorySerializer
 	{
 	public:
-		ReadMemorySerializer(MemoryStream* stream);
+		ReadMemorySerializer(SharedPtr<MemoryStream>& stream);
+        ~ReadMemorySerializer();
 
 		virtual Serializer& operator << (uint& v);
 

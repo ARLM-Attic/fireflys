@@ -14,8 +14,11 @@
 
 #include "Yield.h"
 #include "Filesystem.h"
+#include "Object.h"
 #include "Property.h"
 #include "Serializer.h"
 #include "Template.h"
+#include "Stream.h"
+#include "Serializer.h"
 
 #endif // __CORE_H__

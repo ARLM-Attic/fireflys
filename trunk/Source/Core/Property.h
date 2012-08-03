@@ -68,6 +68,8 @@ namespace Fireflys
 	class FF_API PropertyFactoryManager
 	{
 	public:
+		static PropertyFactoryManager& Instance(); 
+
 		bool Register(const char* type, PropertyFactory* pf);
 		void Unregister(const char* type);
 
@@ -79,8 +81,6 @@ namespace Fireflys
 			const char* name = typeid(T).name();
 			return GetFactory(name);
 		}
-
-		static PropertyFactoryManager& Instance(); 
 
 	protected:
 		PropertyFactoryMap mFactorys;

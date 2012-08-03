@@ -22,36 +22,8 @@ namespace Fireflys
 
 #include "allocator.h"
 
-// debug macros
-#define fassert assert
-
 namespace Fireflys
 {
-
-	// container defines
-	template <typename T, typename A = std::allocator<T> >
-	struct flist
-	{
-		typedef typename std::list<T, A> type;
-	};
-
-	template <typename T, typename A = std::allocator<T> >
-	struct fvector
-	{
-		typedef typename std::vector<T, A> type;
-	};
-
-	template <typename K, typename V, typename P = std::less<K>, typename A = std::allocator<K> >
-	struct fmap
-	{
-		typedef typename std::map<K, V, P, A> type;
-	};
-
-	// string defines
-	typedef std::basic_string<char, std::char_traits<char>, std::allocator<char> > fstring;
-
-	typedef std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > fwstring;
-
 	typedef std::string String;
 }
 
